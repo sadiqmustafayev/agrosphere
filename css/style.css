@@ -1,4 +1,3 @@
-/********** Template CSS **********/
 :root {
     --primary: #88B44E;
     --secondary: #FB9F38;
@@ -544,14 +543,29 @@
 }
 
 .social-icon {
-    color: #555;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-icon:hover {
-    transform: scale(1.2);
-    color: #e63946;
+/* YouTube ikonu üçün */
+.social-icon .fa-youtube {
+    color: #ff0000; /* Qırmızı */
 }
+
+.social-icon .fa-youtube:hover {
+    transform: scale(1.2);
+    color: #cc0000; /* Daha tünd qırmızı */
+}
+
+/* TikTok ikonu üçün */
+.social-icon .fa-tiktok {
+    color: #000000; /* Qara */
+}
+
+.social-icon .fa-tiktok:hover {
+    transform: scale(1.2);
+    color: #ff0050; /* TikTok-un çəhrayı rəngi */
+}
+
 
 body {
     font-family: Arial, sans-serif;
@@ -680,3 +694,65 @@ header h1 {
     }
 }
 
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 20px;
+}
+.pricing-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 40px; 
+}
+.pricing-card .btn {
+    background-color: #218838 !important; 
+    color: #fff !important;
+    transition: 0.3s;
+    width: 80%;
+    text-align: center;
+    margin-top: auto;
+}
+.pricing-card:hover {
+    background-color: #9cba56;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.pricing-card:hover .pricing-price {
+    color: #fff;
+}
+
+.pricing-card:active {
+    transform: translateY(-5px);
+}
+.pricing-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.pricing-price {
+    font-size: 28px;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.pricing-features li {
+    padding: 5px 0;
+}
